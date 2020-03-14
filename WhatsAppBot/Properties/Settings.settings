@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WhatsAppBot.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ChromeBinary" Type="System.String" Scope="User">
+      <Value Profile="(Default)">E:\DEV\chrome-win\chrome.exe</Value>
+    </Setting>
+    <Setting Name="LyricsStore" Type="System.String" Scope="User">
+      <Value Profile="(Default)">E:\Lyrics</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

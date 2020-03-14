@@ -1,0 +1,33 @@
+﻿<Window x:Class="WhatsAppBot.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WhatsAppBot"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing">
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" Grid.Column="0" Command="{Binding HookupUICommand}">Hookup</Button>
+        <Button Grid.Row="0" Grid.Column="1" Command="{Binding SendRandomMessageCommand}" IsEnabled="{Binding Ready}">Send Random Message</Button>
+
+        <Label FontWeight="Bold" Grid.Row="1" Grid.ColumnSpan="2" >
+            <TextBlock Text="{Binding Status, FallbackValue=Status}"/>
+        </Label>
+
+        <Button Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Command="{Binding ToggleTimerCommand}"  IsEnabled="{Binding Ready}">Toggle Timer</Button>
+        <Button Grid.Row="3" Command="{Binding SendSongCommand}"  IsEnabled="{Binding Ready}">Send From Song</Button>
+    </Grid>
+</Window>
